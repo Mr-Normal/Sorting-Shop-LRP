@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6131298832261132924}
   - component: {fileID: 6131298832261132925}
   - component: {fileID: 6131298832261132927}
+  - component: {fileID: 6211965755918219074}
   m_Layer: 0
   m_Name: Request
   m_TagString: Untagged
@@ -74,6 +75,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   applyAnimation: {fileID: 7400000, guid: 3f376fa05ecd24a4499013c75bab8e77, type: 2}
+--- !u!114 &6211965755918219074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6131298832261132915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab015737068d6cc48acf0267c1f958c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  request: {fileID: 6131298832261132925}
+  animationApply: {fileID: 6131298832261132927}
+  lightSwitch: {fileID: 0}
+  timer: {fileID: 0}
+  progressBar: {fileID: 0}
+  alertSeconds: 10
 --- !u!1 &7850415735001833269
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,15 +6,7 @@ public class AnimationApply : MonoBehaviour
 {
     public AnimationClip applyAnimation;
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.tag == "Chest")
-        {
-            AddAndPlayAnimation(other.gameObject);
-        }
-    }
-
-    void AddAndPlayAnimation(GameObject go)
+    public void AddAndPlayAnimation(GameObject go)
     {
         Animation animation = go.GetComponent<Animation>();
         animation.clip = applyAnimation;

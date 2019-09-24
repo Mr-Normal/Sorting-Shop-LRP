@@ -14,21 +14,13 @@ public class Request : MonoBehaviour
         RefrashOrder();
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.tag == "Chest")
-        {
-            ProcessOrder(other.gameObject);
-        }
-    }
-
     void SendChest(GameObject go)
     {
         Destroy(go, 22);
         go.transform.SetParent(transform);
     }
 
-    void ProcessOrder(GameObject go)
+    public void ProcessOrder(GameObject go)
     {
         if (IsValid(go))
         {

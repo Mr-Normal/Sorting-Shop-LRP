@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Slider2
+  m_Name: Slider
   m_Shader: {fileID: 4800000, guid: 243be2e5f33c65745a231cd718030783, type: 3}
   m_ShaderKeywords: BOOLEAN_C29DA69B_ON ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
@@ -53,7 +53,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Boolean_C29DA69B: 1
-    - Vector1_8D10CCC0: 0.67
+    - Vector1_8D10CCC0: 0.64509845
     - Vector1_D39670FD: 90
     - _AlphaClip: 0
     - _Blend: 0

@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class Timer : MonoBehaviour
 {
     public bool isLoop;
-    [Range(0, 100)] public float maxSecond = 1;
+    [Range(0, 86400)] public float maxSecond = 1;
     float secondToEnd;
     public UnityEvent OnEnd;
     bool canCalling = true;
@@ -33,7 +33,7 @@ public class Timer : MonoBehaviour
         }
     }
 
-    void Restart()
+    public void Restart()
     {
         secondToEnd = maxSecond;
         canCalling = true;
@@ -41,7 +41,7 @@ public class Timer : MonoBehaviour
 
     public float Progress()
     {
-        return 1 - secondToEnd / maxSecond;
+        return Progress(maxSecond);
     }
 
     public float Progress(float maxSecond)

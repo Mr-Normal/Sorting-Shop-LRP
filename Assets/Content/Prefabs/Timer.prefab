@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLoop: 1
-  maxSecond: 2
+  maxSecond: 10
   OnEnd:
     m_PersistentCalls:
       m_Calls:

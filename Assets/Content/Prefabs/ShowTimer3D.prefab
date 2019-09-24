@@ -91,7 +91,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c93bab107d600ab45847d1cba3f7c1c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  progress: 0
   sliderAnimator: {fileID: 141658371624783062}
 --- !u!95 &141658371624783062
 Animator:
@@ -234,5 +233,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2066b10a0c3f98f4894696d6a143975a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 7591794560262555721}
+  sliderGO: {fileID: 2338914247413383091}
   timer: {fileID: 0}
