@@ -1,15 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Events;
+﻿using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
-    public bool isLoop;
+    [Tooltip("Если true - таймер после завершения перезапускается")]public bool isLoop;
     [Range(0, 86400)] public float maxSecond = 1;
-    float secondToEnd;
-    public UnityEvent OnEnd;
-    bool canCalling = true;
+    [SerializeField] float secondToEnd;
 
     void Start()
     {
@@ -20,11 +15,7 @@ public class Timer : MonoBehaviour
     {
         if(secondToEnd <= 0)
         {
-            if (canCalling)
-            {
-                OnEnd?.Invoke();
-                canCalling = false;
-            }
+            secondToEnd = 0;
             if (isLoop) { Restart(); }
         }
         else
@@ -35,15 +26,23 @@ public class Timer : MonoBehaviour
 
     public void Restart()
     {
-        secondToEnd = maxSecond;
-        canCalling = true;
+        Restart(maxSecond);
     }
 
+    public void Restart(float maxSecond)
+    {
+        this.maxSecond = maxSecond;
+        secondToEnd = maxSecond;
+    }
+
+    /// <summary> Сколько осталось времени до конца (возвращает в долях - от 0 до 1) </summary>
     public float Progress()
     {
         return Progress(maxSecond);
     }
 
+    /// <summary> Сколько осталось времени до конца (возвращает в долях - от 0 до 1) </summary>
+    /// <param name="maxSecond"></param>
     public float Progress(float maxSecond)
     {
         float progress = 1 - secondToEnd / maxSecond;

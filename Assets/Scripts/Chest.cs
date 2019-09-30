@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Chest : MonoBehaviour
 {
-    void PickThis(Transform pickPosition)
+    public void PickThis(Transform pickPosition)
     {
         if (!CanPicked()) { return; }
         Transform newParent = pickPosition;
@@ -15,10 +13,10 @@ public class Chest : MonoBehaviour
         transform.localRotation = Quaternion.identity;
 
         rb = GetComponent<Rigidbody>();
-        SetActive(rb, false);
+        SetActive(rb, false);           
     }
 
-    void DropThis()
+    public void DropThis()
     {
         Rigidbody rb = GetComponent<Rigidbody>();
         Transform newParent = GetNewParent();
@@ -27,11 +25,13 @@ public class Chest : MonoBehaviour
         transform.SetParent(newParent);
     }
 
+    //Возвращает Transform, ребенком которого является Character
     Transform GetNewParent()
     {
         return transform.parent.parent.parent;
     }
 
+    //Активирует/дезактивирует Rigidbody
     void SetActive(Rigidbody rb, bool isActive)
     {
         if (isActive)
@@ -47,6 +47,7 @@ public class Chest : MonoBehaviour
         }
     }
 
+    //Возвращает true если ящик разрешено поднимать
     bool CanPicked()
     {
         Animation animation = GetComponent<Animation>();

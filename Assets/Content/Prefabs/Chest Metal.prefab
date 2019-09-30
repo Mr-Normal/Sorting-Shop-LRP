@@ -156,6 +156,16 @@ PrefabInstance:
       propertyPath: m_PlayAutomatically
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6945013486522083397, guid: d313b1799f65d544885cc179e2ab4aae,
+        type: 3}
+      propertyPath: m_Mass
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6945013486522083397, guid: d313b1799f65d544885cc179e2ab4aae,
+        type: 3}
+      propertyPath: m_Drag
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d313b1799f65d544885cc179e2ab4aae, type: 3}
 --- !u!4 &2611191799785928518 stripped

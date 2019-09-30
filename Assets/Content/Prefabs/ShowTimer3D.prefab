@@ -198,6 +198,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2338914248697704988}
   - component: {fileID: 1651835316576586232}
+  - component: {fileID: 8778959023743240824}
   m_Layer: 0
   m_Name: ShowTimer3D
   m_TagString: Untagged
@@ -234,4 +235,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sliderGO: {fileID: 2338914247413383091}
+--- !u!114 &8778959023743240824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2338914248697704987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 728586a6a9ff97f4aa4565251f4c6be6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   timer: {fileID: 0}
+  progressBar: {fileID: 1651835316576586232}

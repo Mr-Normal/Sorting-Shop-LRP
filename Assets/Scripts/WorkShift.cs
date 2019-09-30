@@ -1,13 +1,26 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class WorkShift : MonoBehaviour
+public static class WorkShift
 {
-    public float score;
+    static float score;
 
-    public void End()
+    /// <summary> Конец рабочей смены </summary>
+    public static void End()
     {
-        Debug.Log("Конец рабочей смены");
+        Application.Quit();
     }
+
+    public static float Score
+    {
+        get
+        {
+            return score;
+        }
+    }
+
+    public static void AddScore(float score)
+    {
+        WorkShift.score += score;
+    }
+
 }
